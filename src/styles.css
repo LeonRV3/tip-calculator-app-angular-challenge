@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+
+    /* COLORS PRIMARY */
+    --Strongcyan: hsl(172, 67%, 45%);
+    /* COLORS NEUTRAL */
+    --Verydarkcyan:hsl(183,100%,15%);
+    --Darkgrayishcyan:hsl(186,14%,43%);
+    --Darkgrayishcyan:hsl(184,14%,56%);
+    --Lightgrayishcyan:hsl(185,41%,84%);
+    --Lightgrayishcyan:hsl(189,41%,97%);
+    --White:hsl(0,0%,100%);
+
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+main{
+    width: 100%; 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: rgb(2, 2, 2);
+    max-width: 100rem;
+    min-width: 100%;
+    min-height: 60rem;
+    display: grid;
+    grid-template-rows:  50% 50%;
+}
+.title{
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+ h1, h2{
+     margin: 0;
+ }
+
+

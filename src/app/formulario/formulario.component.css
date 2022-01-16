@@ -1,0 +1,21 @@
+.bill{
+    background-color: aquamarine;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-botones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+input{
+    margin: 1rem 1rem 1rem 0;
+}

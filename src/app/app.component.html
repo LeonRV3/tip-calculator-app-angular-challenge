@@ -4,7 +4,7 @@
     <h2>TTER</h2>
   </div>
   <div class="container">
-    <app-formulario></app-formulario>
-    <app-resultado></app-resultado>
+    <app-formulario (newItemEvent)="addItem($event)"></app-formulario>
+    <app-resultado [valorTip]="valueTipAmount" [valorTotalPersona]="valueTotalPerson"></app-resultado>
   </div>
 </main>

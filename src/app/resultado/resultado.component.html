@@ -5,15 +5,15 @@
             <h3>Tip Amount</h3>
             <p>/ person</p>
         </div>
-        <h2>$4.27</h2>
+        <h2>{{valorTip | currency:'MNX':'$':'1.2-2'}}</h2>
     </div>
 
-    <div class="labels">
+    <div class="labels label-medium">
         <div class="label-seccion">
             <h3>Total</h3>
             <p>/ person</p>
         </div>
-        <h2>$32.79</h2>
+        <h2>{{valorTotalPersona | currency:'MNX':'$':'1.2-2'}}</h2>
     </div>
 
     <button class="btn-reset">RESET</button>

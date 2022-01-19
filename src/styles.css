@@ -5,9 +5,9 @@
     /* COLORS NEUTRAL */
     --Verydarkcyan:hsl(183,100%,15%);
     --Darkgrayishcyan:hsl(186,14%,43%);
-    --Darkgrayishcyan:hsl(184,14%,56%);
+    --Darkgrayishcyan2:hsl(184,14%,56%);
     --Lightgrayishcyan:hsl(185,41%,84%);
-    --Lightgrayishcyan:hsl(189,41%,97%);
+    --Lightgrayishcyan-otro:hsl(189,41%,97%);
     --White:hsl(0,0%,100%);
 
 }
@@ -22,6 +22,11 @@ html {
 *::after {
     box-sizing: inherit;
 }
+body{
+    background-color: var(--Lightgrayishcyan);
+    margin: 0;
+    padding: 0;
+}
 main{
     width: 100%; 
     min-height: 100vh;
@@ -31,13 +36,28 @@ main{
     align-items: center;
 }
 .container{
-    background-color: rgb(2, 2, 2);
     max-width: 100rem;
     min-width: 100%;
-    min-height: 60rem;
+    min-height: 65rem;
+    
     display: grid;
-    grid-template-rows:  50% 50%;
+    grid-template-rows:  65% 35%;
+    background-color: white;
+
+    border-radius: 15px 15px 0 0;
+    padding: 1rem;
 }
+
+@media (min-width: 700px) {
+    .container{
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 70rem;
+        min-width: 50%;
+        min-height: 40rem;
+    }
+}
+
 .title{
     width: 10rem;
     display: flex;
@@ -49,5 +69,9 @@ main{
  h1, h2{
      margin: 0;
  }
+
+ /* input[type=button]{
+     height: 3rem;
+ } */
 
 

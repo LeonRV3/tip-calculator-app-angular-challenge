@@ -1,8 +1,10 @@
 .bill{
-    background-color: aquamarine;
     width: 100%;
     height: 100%;
-    padding: 2rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 15px 15px 0 0;
+
 }
 
 form{
@@ -11,11 +13,134 @@ form{
 }
 
 .grupo-botones{
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    align-self: center;
+    width: 100%;
+}
+
+
+
+label{
+    font-size: 1.2rem;
+    color: var(--Darkgrayishcyan);
+    font-weight: bold;
+    margin-bottom: .1rem;
 }
 
 input{
     margin: 1rem 1rem 1rem 0;
+    height: 3.7rem;
+    border: none;
+    background-color: var(--Lightgrayishcyan-otro);
+    color: var(--Verydarkcyan);
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding-right: 1rem;
+    font-family: 'Space Mono', monospace;
+}
+
+input[type=button]{
+    height: 3.7rem;
+    background-color: var(--Verydarkcyan);
+    color: var(--White);
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 0;
+    font-size: 1.8rem;
+    /* width: 0%; */
+}
+input[type=button]{
+    height: 3.7rem;
+    background-color: var(--Verydarkcyan);
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 0;
+    font-size: 1.8rem;
+    /* width: 0%; */
+}
+.grupo-botones input[type=number]{
+    
+    height: 3.7rem;
+    border-radius: 6px;
+    font-weight: bold;
+    padding: 0;
+    font-size: 1.8rem;
+    width: 90%;
+    text-align: center;
+}
+
+.boton-custom{
+    color: var(--Darkgrayishcyan) !important;
+    background-color: var(--Lightgrayishcyan-otro) !important;
+}
+
+.input-wrapper{
+    position: relative;
+    /* margin-top: 1rem; */
+}
+
+.input-wrapper > input{
+    direction: rtl;
+    width: 100%;
+    
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+}
+
+
+/**************HIDE ARROW INPUT NUMBER********************/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+/*********************************************************/
+
+
+.btn-active{
+    background-color: var(--Strongcyan) !important;
+    color: var(--Verydarkcyan) !important;
+}
+
+.error-input{
+    border: 2px solid red !important;
+}
+
+.labels{
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-error > label{
+    color: red;
+}
+
+@media (min-width: 700px) {
+    .grupo-botones{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .bill{
+        display: flex;
+        align-items: center;
+    }
+    form{
+           height: 100%;
+            justify-content: space-between;            
+        }
 }

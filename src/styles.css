@@ -55,6 +55,7 @@ main{
         max-width: 70rem;
         min-width: 50%;
         min-height: 40rem;
+        border-radius: 15px;
     }
 }
 
@@ -65,9 +66,13 @@ main{
     justify-content: center;
     align-items: center;
     margin-bottom: 1rem;
+    color: var(--Darkgrayishcyan);
+    letter-spacing: 5px;
 }
- h1, h2{
-     margin: 0;
+ .title > h1, h2{
+     margin: 0; 
+     font-size: 2rem;
+    /* letter-spacing: 2px; */
  }
 
  /* input[type=button]{

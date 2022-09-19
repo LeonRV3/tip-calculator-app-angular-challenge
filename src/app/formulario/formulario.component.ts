@@ -11,12 +11,8 @@ export class FormularioComponent {
   bill: number = 0;
   valorTip: number = 0;
   numberOfPeople: number = 0;
-
   tipAmount: number = 0;
   totalPersona: number = 0;
-
-
-
 
   @Output() newItemEvent = new EventEmitter<number[]>();
 
@@ -31,13 +27,12 @@ export class FormularioComponent {
 
     let inputValueStr = inputValue.value;
 
-
-
     if (inputValueStr === '') {
       inputValueStr = '0';
     }
 
     if (Number(inputValueStr) !== NaN) {
+
       const inputValueNum = Number(inputValueStr);
 
       if (inputValue.name === 'billInput') {
@@ -46,6 +41,7 @@ export class FormularioComponent {
         this.numberOfPeople = inputValueNum;
       }
     }
+
     this.emitValues(inputValue);
   }
 
@@ -89,6 +85,10 @@ export class FormularioComponent {
 
   }
 
+  /**
+   * 
+   * @returns amount of the tip
+   */
 
   calculateTipAmount(): number {
     return ((this.bill * this.valorTip) / 100) / this.numberOfPeople;

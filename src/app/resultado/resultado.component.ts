@@ -9,4 +9,9 @@ export class ResultadoComponent {
   @Input() valorTip: number = 0;
   @Input() valorTotalPersona: number = 0;
 
+
+  clean(): void {
+    this.valorTip = 0;
+    this.valorTotalPersona = 0;
+  }
 }
